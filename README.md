@@ -285,6 +285,19 @@
 
 ---
 
+## Distribuição das user stories
+
+Cada membro testa 4 user stories diferentes, como pede o guião. A distribuição equilibra o esforço de teste (fácil = 1, média = 2, US8 = 2,5, US4 = 3). A US5, a US10 e a US12 ficam fora da distribuição por serem as mais difíceis de automatizar: dependem de jogadores reais, de uma partida completa contra o relógio ou de presentes que aparecem ao acaso.
+
+| Membro | Número | User stories (da mais fácil para a mais difícil) | Esforço |
+|--------|--------|--------------------------------------------------|:---:|
+| Pedro Coelho  | 129825 | [US2](#us2--escolher-um-nickname), [US13](#us13--consultar-a-classificação-diária), [US15](#us15--criar-um-torneio-privado), [US7](#us7--colocação-automática-dos-navios) | 5 |
+| Martim Barros | 129873 | [US1](#us1--jogar-como-convidado), [US6](#us6--ver-o-tabuleiro-e-a-frota), [US3](#us3--jogar-contra-o-robot), [US8](#us8--disparar-sobre-o-adversário) | 5,5 |
+| João Almeida  | 129862 | [US17](#us17--ler-as-regras-do-jogo), [US18](#us18--consultar-as-perguntas-frequentes), [US9](#us9--ver-o-resultado-do-disparo), [US11](#us11--usar-o-míssil-grande) | 6 |
+| Gonçalo Sena  | 104893 | [US14](#us14--consultar-o-ranking-ranka), [US19](#us19--navegar-para-outros-jogos), [US16](#us16--ver-os-meus-torneios), [US4](#us4--jogar-com-um-amigo) | 6 |
+
+---
+
 ## Notas para os testes automatizados
 
 Observações feitas no site, úteis para escrever as Page Object Classes:
