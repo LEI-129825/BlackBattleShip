@@ -206,7 +206,93 @@
   }, {
     "id": "dcc62102-ea94-4ac5-91e4-a35abc1189bb",
     "name": "UserStoryTest8",
-    "commands": []
+    "commands": [{
+      "id": "61c1f73b-a666-4d7e-b806-7690c4d95814",
+      "comment": "Abrir a página do jogo Batalha Naval no papergames.io",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec9960ef-1717-42b4-84a7-9f1bdc243475",
+      "comment": "Definir o tamanho da janela do browser",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f120f48f-b6f7-45aa-89d9-d799ddc56eee",
+      "comment": "Aceitar os cookies",
+      "command": "click",
+      "target": "css=.fc-cta-consent",
+      "targets": [
+        ["css=.fc-cta-consent", "css:finder"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fafa761e-874c-4669-a158-d733f5f64fdb",
+      "comment": "Clicar em Play vs robot para jogar contra o computador",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1691784f-62f6-4d78-9f6e-6718809816ea",
+      "comment": "Escrever o nickname TesteMartim",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TesteMartim"
+    }, {
+      "id": "7eed01ec-5872-4d3e-a6e8-8f3f640950b6",
+      "comment": "Confirmar o nickname com Enter e iniciar a partida",
+      "command": "sendKeys",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ee98dc68-cd70-4ada-b82b-3ca355026a83",
+      "comment": "Disparar sobre uma casa da grelha do adversário",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c4ebf71-7671-497d-b638-959bc747eef5",
+      "comment": "Voltar a clicar na mesma casa já atacada",
+      "command": "click",
+      "target": "css=.hover > .circle",
+      "targets": [
+        ["css=.hover > .circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d96ef7b-01da-41a7-9a19-be07423ae9ac",
+      "comment": "Clicar numa casa da própria grelha, que não deve disparar",
+      "command": "click",
+      "target": "css=.cell-4-5 > .intersection",
+      "targets": [
+        ["css=.cell-4-5 > .intersection", "css:finder"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "d70c695d-108f-4c18-bba6-b8036d0d48b2",
