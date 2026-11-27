@@ -1,10 +1,15 @@
 package iscteiul.ista.blackbattleship;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
@@ -26,7 +31,10 @@ public class MainPage {
     @FindBy(css = "button[class='ch2-btn ch2-allow-all-btn ch2-btn-primary']")
     public WebElement cookieAllowButton;
 
+    private WebDriver driver;
+
     public MainPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -35,6 +43,13 @@ public class MainPage {
      * This method encapsulates the interaction with the popup element.
      */
     public void closePopUp() {
-        cookieAllowButton.click();
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(10))
+                    .until(ExpectedConditions.elementToBeClickable(
+                            By.cssSelector("button.ch2-allow-all-btn")))
+                    .click();
+        } catch (TimeoutException e) {
+            // o banner de cookies não apareceu, seguimos sem o fechar
+        }
     }
 }
