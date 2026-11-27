@@ -40,13 +40,13 @@ public class MainPageTest {
     public void search() throws InterruptedException {
         Thread.sleep(3000);
         mainPage.searchButton.click();
-        //Thread.sleep(1000);
+        Thread.sleep(1000);
         WebElement searchField = driver.findElement(By.cssSelector("[data-test-id='search-input']"));
         searchField.sendKeys("Selenium");
 
         WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
         submitButton.click();
-        //Thread.sleep(1000);
+        Thread.sleep(1000);
         WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test-id='search-input']"));
         assertEquals("Selenium", searchPageField.getAttribute("value"));
     }

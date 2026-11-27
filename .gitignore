@@ -37,7 +37,3 @@ build/
 
 ### Mac OS ###
 .DS_Store
-### Generated / local ###
-.idea/workspace.xml
-allure-results/
-reports/
