@@ -143,7 +143,66 @@
   }, {
     "id": "21eefa80-8418-4e74-873e-c76f7d821ae5",
     "name": "UserStoryTest6",
-    "commands": []
+    "commands": [{
+      "id": "431905ba-a241-4404-92b9-79ea0eecfa59",
+      "comment": "Abrir a página do jogo",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ba16a45-0d08-4ea5-baf7-7daf31a28f87",
+      "comment": "Definir o tamanho da janela do browser (mínimo 1280 px)",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ff05ed5-0ad0-4ff4-a6e2-6536a43ebad6",
+      "comment": "Aceitar o consentimento de cookies",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48b64289-dec8-4417-8c89-58b49716b96a",
+      "comment": "Escolher o modo Play vs robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67b15a1f-f965-4808-928f-2fb0f27ac58a",
+      "comment": "Escrever o nickname no campo Nickname",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TesteMartim"
+    }, {
+      "id": "0c8fd150-21b9-4569-abe4-c60c7b8520fa",
+      "comment": "Confirmar o nickname e começar a partida",
+      "command": "sendKeys",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
   }, {
     "id": "dcc62102-ea94-4ac5-91e4-a35abc1189bb",
     "name": "UserStoryTest8",
