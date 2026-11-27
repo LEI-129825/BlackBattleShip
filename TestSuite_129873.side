@@ -1,0 +1,162 @@
+{
+  "id": "a56689d2-68ba-4d67-a5e9-a3eea4878b1b",
+  "version": "2.0",
+  "name": "TestSuite_129873",
+  "url": "https://papergames.io/en/battleship",
+  "tests": [{
+    "id": "1cc2d1c2-411b-49d7-9c8a-325f23adfc06",
+    "name": "UserStoryTest1",
+    "commands": [{
+      "id": "bbd04810-758b-4ec1-816b-746796172d21",
+      "comment": "Abrir a página do jogo",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc1504ec-3b1a-4b1d-b72a-3830fe6cc26a",
+      "comment": "Definir o tamanho da janela do browser",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18d68150-e36d-415a-8d84-e490387ae935",
+      "comment": "Aceitar o consentimento de cookies",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcac2dcd-8dd3-41b1-9879-bc98436cc27a",
+      "comment": "Escolher o modo Play vs robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83e8a5a8-1b7e-460d-8e2b-af63a5b84c9b",
+      "comment": "Escrever o nickname no campo Nickname",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TesteMartim"
+    }, {
+      "id": "90af6484-6f21-4d83-9a11-a59bdcc3f615",
+      "comment": "Confirmar o nickname com Continue e começar a partida",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c282f784-8410-44fc-b265-b7130dceb586",
+    "name": "UserStoryTest3",
+    "commands": [{
+      "id": "04d84867-9e69-4709-95fb-e023dcf9f964",
+      "comment": "Abrir a página do jogo",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "306c7283-547d-42ac-ad39-1316889f7e9e",
+      "comment": "Definir o tamanho da janela do browser",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d96ef8c4-8063-4660-b042-44b7d8d4d2aa",
+      "comment": "Aceitar o consentimento de cookies",
+      "command": "click",
+      "target": "css=.fc-cta-consent > .fc-button-label",
+      "targets": [
+        ["css=.fc-cta-consent > .fc-button-label", "css:finder"],
+        ["xpath=//button/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60622147-9b96-450b-a56c-0b4ca650fc55",
+      "comment": "\tEscolher o modo Play vs robot",
+      "command": "click",
+      "target": "css=.w-100:nth-child(2) > .btn .flex-grow-1",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn .flex-grow-1", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7235c21f-dff3-4df1-b555-fe2656fa56f3",
+      "comment": "\tEscrever o nickname no campo Nickname",
+      "command": "type",
+      "target": "css=.input-xl",
+      "targets": [
+        ["css=.input-xl", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/section/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "TesteMartim"
+    }, {
+      "id": "6c9cfe34-e703-4959-9db8-80a993653f8f",
+      "comment": "Confirmar o nickname e começar a partida contra o robot",
+      "command": "click",
+      "target": "css=.p-3 > .btn",
+      "targets": [
+        ["css=.p-3 > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-guest-registration-dialog/form/app-dialog-layout/div/footer/button", "xpath:idRelative"],
+        ["xpath=//footer/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a262b3c5-819d-456f-8a8b-85057b229b3a",
+      "comment": "Disparar numa casa da grelha do adversário",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "21eefa80-8418-4e74-873e-c76f7d821ae5",
+    "name": "UserStoryTest6",
+    "commands": []
+  }, {
+    "id": "dcc62102-ea94-4ac5-91e4-a35abc1189bb",
+    "name": "UserStoryTest8",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "d70c695d-108f-4c18-bba6-b8036d0d48b2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": [],
+  "plugins": []
+}
